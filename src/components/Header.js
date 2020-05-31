@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { StyleSheet, Text, View, Platform, Image } from 'react-native'
+import { StyleSheet, Text, View, Image } from 'react-native'
 import icon from '../../assets/imgs/icon.png'
 import * as Font from 'expo-font'
 
@@ -29,7 +29,7 @@ const Header = () => {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: Platform.OS === 'ios' ? 20 : 0,
+    marginTop: 20,
     padding: 10,
     borderBottomWidth: 1,
     borderColor: '#bbb',
