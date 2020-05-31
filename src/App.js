@@ -6,12 +6,25 @@ import Post from './components/Post'
 
 const fenceImg = require('../assets/imgs/fence.jpg')
 
-const App = () => (
-  <View style={styles.container}>
-    <Header />
-    <Post image={fenceImg} />
-  </View>
-)
+const App = () => {
+  const comments = [
+    {
+      nickname: 'Joana Elena Silva',
+      comment: 'Excelente Foto!',
+    },
+    {
+      nickname: 'Rafael Gustavo Pereira',
+      comment: 'Muito ruim! Faço melhor...',
+    },
+  ]
+
+  return (
+    <View style={styles.container}>
+      <Header />
+      <Post image={fenceImg} comments={comments} />
+    </View>
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
