@@ -1,5 +1,5 @@
 import registerRootComponent from 'expo/build/launch/registerRootComponent'
 
-import App from './src/App'
+import Feed from './src/screens/Feed'
 
-registerRootComponent(App)
+registerRootComponent(Feed)
