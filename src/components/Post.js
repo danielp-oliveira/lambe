@@ -1,9 +1,12 @@
 import React from 'react'
 import { StyleSheet, View, Image, Dimensions } from 'react-native'
 
+import Author from './Author'
+
 const Post = (props) => (
   <View style={styles.container}>
     <Image source={props.image} style={styles.image} />
+    <Author email='fulano@gmail.com' nickname='Fulano de Tal' />
   </View>
 )
 
