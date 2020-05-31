@@ -54,7 +54,7 @@ const AddPhoto = () => {
       <View style={styles.container}>
         <Text style={styles.title}>Compartilhe uma imagem</Text>
         <View style={styles.imageContainer}>
-          <Image source={{ uri: image.uri }} style={styles.image} />
+          <Image source={{ uri: image?.uri }} style={styles.image} />
         </View>
         <TextInput
           placeholder='Algum comentário para a foto?'
