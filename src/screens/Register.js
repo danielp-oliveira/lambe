@@ -7,21 +7,24 @@ import {
     TextInput,
 } from 'react-native'
 
-const Login = (props) => {
+const Register = () => {
+    const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-
-    const login = () => {
-        props.navigation.navigate('Profile')
-    }
 
     return (
         <View style={styles.container}>
             <TextInput
-                placeholder='Email'
+                placeholder='Nome'
                 style={styles.input}
                 autoFocus={true}
-                keyboardType='email-address'
+                value={name}
+                onChangeText={(name) => setName(name)}
+            />
+            <TextInput
+                placeholder='Email'
+                style={styles.input}
+                keyboradType='email-address'
                 value={email}
                 onChangeText={(email) => setEmail(email)}
             />
@@ -32,16 +35,8 @@ const Login = (props) => {
                 value={password}
                 onChangeText={(password) => setPassword(password)}
             />
-            <TouchableOpacity onPress={login} style={styles.buttom}>
-                <Text style={styles.buttomText}>Login</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-                onPress={() => {
-                    props.navigation.navigate('Register')
-                }}
-                style={styles.buttom}
-            >
-                <Text style={styles.buttomText}>Criar nova conta</Text>
+            <TouchableOpacity onPress={() => {}} style={styles.button}>
+                <Text style={styles.buttonText}>Salvar</Text>
             </TouchableOpacity>
         </View>
     )
@@ -53,23 +48,23 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    buttom: {
+    button: {
         marginTop: 30,
         padding: 10,
         backgroundColor: '#4286f4',
     },
-    buttomText: {
+    buttonText: {
         fontSize: 20,
-        color: '#FFF',
+        color: '#fff',
     },
     input: {
         marginTop: 20,
         width: '90%',
-        backgroundColor: '#EEE',
+        backgroundColor: '#eee',
         height: 40,
-        borderWidth: 1,
         borderColor: '#333',
+        paddingLeft: 15,
     },
 })
 
-export default Login
+export default Register
